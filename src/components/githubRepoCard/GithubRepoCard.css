@@ -67,18 +67,20 @@
 }
 
 .repo-description {
-  overflow: hidden;
+  overflow: visible;
   text-align: left;
   display: -webkit-box;
   font-family: "Google Sans Regular";
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   margin-top: 0.8rem;
+  display: flex;
 }
 
 .repo-details {
   display: flex;
   flex-direction: row;
+  margin-top: 0.8em;
 }
 
 .repo-creation-date {
@@ -90,8 +92,8 @@
 }
 
 .repo-languages {
-  margin-left: auto;
-  margin-right: 0px;
+  margin-top: 0.8em;
+  align-items: center;
 }
 
 @media (max-width: 768px) {

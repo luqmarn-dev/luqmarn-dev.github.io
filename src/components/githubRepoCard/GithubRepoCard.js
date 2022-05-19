@@ -5,6 +5,7 @@ import { Fade } from "react-reveal";
 
 export default function GithubRepoCard({ repo, theme }) {
   function openRepoinNewTab(url) {
+    if (!url) return;
     var win = window.open(url, "_blank");
     win.focus();
   }
@@ -44,12 +45,11 @@ export default function GithubRepoCard({ repo, theme }) {
               className="repo-creation-date subTitle"
               style={{ color: theme.secondaryText }}
             >
-              Created on {repo.createdAt.split("T")[0]}
+              Started working on {repo.createdAt}
             </p>
-            <ProjectLanguages
-              className="repo-languages"
-              logos={repo.languages}
-            />
+          </div>
+          <div className="repo-languages">
+            <ProjectLanguages logos={repo.languages} />
           </div>
           {/* <div className="repo-stats">
           <div className="repo-left-stat">
